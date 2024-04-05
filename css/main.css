@@ -8,36 +8,318 @@
 body {
   background-color: #ffefe7;
   color: #7c6a0a;
-  max-width: 1400px;
   margin: auto;
 }
 
+svg path {
+  stroke: currentColor;
+}
+
 nav {
+  max-width: 1400px;
+  padding: 0 4vw;
+  margin: auto;
   width: 100%;
-  height: 135px;
+  padding: 2vw 1.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px #ddd solid;
-  padding: 0 85px;
+  border-bottom: 1px #babd8d solid;
 }
 nav p {
   font-size: 30px;
+  width: 100%;
+}
+nav button {
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+nav button:hover {
+  background-color: #ffdac6;
+  border-radius: 5px;
+}
+nav .toggle {
+  display: none;
+}
+nav .toggle svg path {
+  fill: currentColor;
+}
+nav .toggle svg {
+  color: #7c6a0a;
+  width: 35px;
+  height: 35px;
 }
 nav .icons-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   gap: 25px;
-}
-nav .icons-menu button {
-  border: none;
-  background: none;
-}
-nav .icons-menu button svg path {
-  stroke: currentColor;
 }
 nav .icons-menu button svg {
   color: #7c6a0a;
   width: 35px;
   height: 35px;
+}
+
+article {
+  max-width: 1400px;
+  padding: 0 4vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6vw;
+}
+article .description {
+  width: 55%;
+  margin-right: 8vw;
+}
+article .description h1 {
+  font-size: calc(28px + 26 * (100vw - 320px) / 1120);
+}
+article .description p {
+  font-size: calc(14px + 11 * (100vw - 320px) / 1120);
+  margin: 4vw 0;
+}
+article .description button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background: #fa9500;
+  font-size: calc(16px + 8 * (100vw - 320px) / 1120);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+article .description button:hover {
+  opacity: 0.8;
+}
+article .image {
+  width: 45%;
+  max-height: 680px;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .image img {
+  width: 100%;
+}
+
+section {
+  max-width: 1400px;
+  padding: 0 4vw;
+  margin: auto;
+  margin-top: 6vw;
+}
+section h2 {
+  font-size: calc(25px + 20 * (100vw - 320px) / 1120);
+  font-weight: 300;
+  margin: 6vw 0 4vw;
+}
+section .healthcare .container-products, section .furniture .container-products {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+section .healthcare .container-products .card, section .furniture .container-products .card {
+  width: 300px;
+  padding: 50px 40px;
+  background-color: #ffdac6;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section .healthcare .container-products .card svg path, section .furniture .container-products .card svg path {
+  stroke: currentColor;
+}
+section .healthcare .container-products .card svg, section .furniture .container-products .card svg {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #7c6a0a;
+  width: 30px;
+  height: 30px;
+}
+section .healthcare .container-products .card .card-image, section .furniture .container-products .card .card-image {
+  width: auto;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section .healthcare .container-products .card .card-image img, section .furniture .container-products .card .card-image img {
+  width: auto;
+  height: 100%;
+}
+section .healthcare .container-products .card h3, section .furniture .container-products .card h3 {
+  font-size: calc(14px + 11 * (100vw - 320px) / 1120);
+  margin: 20px 0 8px;
+}
+section .furniture .container-products .card {
+  background-color: #babd8d;
+  color: white;
+}
+section .furniture .container-products .card svg {
+  color: white;
+}
+section .container-about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 60px;
+}
+section .container-about-us div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+section .container-about-us div p {
+  font-size: calc(14px + 11 * (100vw - 320px) / 1120);
+  margin-left: 15px;
+  color: #e86424;
+  text-align: center;
+}
+section .gallery .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+section .gallery .container .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+section .gallery .container .image img {
+  width: 100%;
+}
+section .location .map {
+  width: 100%;
+}
+section .location .map img {
+  width: 100%;
+}
+section .location .address {
+  font-size: calc(20px + 15 * (100vw - 320px) / 1120);
+  margin-top: 3vw;
+  font-weight: 600;
+  color: #e86424;
+}
+section .location .small-address {
+  color: #e86424;
+  font-size: calc(14px + 11 * (100vw - 320px) / 1120);
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+footer {
+  color: white;
+  margin-top: 7vw;
+  background-color: #fa9500;
+}
+footer .container-footer {
+  max-width: 1400px;
+  padding: 0 4vw;
+  margin: auto;
+  padding: 25px;
+}
+footer .container-footer ul li {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+footer .container-footer ul .brand {
+  font-size: calc(20px + 15 * (100vw - 320px) / 1120);
+  font-weight: 600;
+}
+footer .container-footer .social-media {
+  text-align: center;
+}
+footer .container-footer .social-media img {
+  width: 50px;
+  height: 50px;
+  padding: 20px 10px 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .toggle {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: inline-block;
+  }
+  nav .icons-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  nav .icons-menu--hidden {
+    display: none;
+  }
+  section .healthcare .container-products, section .furniture .container-products {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    justify-content: initial;
+    gap: 10px;
+  }
+  section .container-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    gap: 60px;
+  }
+  section .container-about-us div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  section .container-about-us div p {
+    font-size: calc(14px + 11 * (100vw - 320px) / 1120);
+    margin-left: 15px;
+    color: #e86424;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  article {
+    flex-direction: column;
+    padding: 20px;
+  }
+  article .description {
+    width: 100%;
+    margin: 40px auto 0;
+    order: 2;
+  }
+  article .image {
+    width: 90%;
+  }
 }/*# sourceMappingURL=main.css.map */
